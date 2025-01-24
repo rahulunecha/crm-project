@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull'){
             steps {
-                git branch: 'dev', url: 'https://github.com/mayurmwagh/combine-project-backend.git'
+                git branch: 'dev', url: 'https://github.com/rahulunecha/crm-project.git'
             }
         }
         stage('build'){
@@ -14,9 +14,9 @@ pipeline {
         stage('deploy'){
             steps{
                 sh '''
-                    docker build . -t mayurwagh/com-backend:latest
-                    docker push mayurwagh/com-backend:latest
-                    docker rmi mayurwagh/com-backend:latest
+                    docker build . -t rahulunecha/com-backend:latest
+                    docker push rahulunecha/crm-backend:latest
+                    docker rmi rahulunecha/crm-backend:latest
                     kubectl apply -f ./yaml/
                 '''
             }
