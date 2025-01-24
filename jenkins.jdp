@@ -14,7 +14,7 @@ pipeline {
         stage('deploy'){
             steps{
                 sh '''
-                    docker build . -t rahulunecha/com-backend:latest
+                    docker build . -t rahulunecha/crm-backend:latest
                     docker push rahulunecha/crm-backend:latest
                     docker rmi rahulunecha/crm-backend:latest
                     kubectl apply -f ./yaml/
