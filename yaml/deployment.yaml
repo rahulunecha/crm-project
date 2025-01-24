@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: com-backend-app
-          image: mayurwagh/com-backend:latest 
+          image: rahulunecha/crm-backend:latest 
           ports:
             - containerPort: 8080 
